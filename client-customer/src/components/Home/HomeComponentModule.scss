@@ -1,0 +1,134 @@
+.container-items{
+    display:flex;
+    flex-wrap: wrap;
+    gap:50px;
+    justify-content: center;
+}
+
+.new-items h2{
+    margin-bottom: 70px;
+}
+
+.grid-new-item img{
+    border-radius: 10px;
+    box-shadow: 4px 15px 14px 0px rgba(0, 0, 0, 0.25);
+}
+
+figure{
+    margin:0;
+}
+
+.grid-new-item{
+    position:relative;
+    
+    & .animatetop{
+        position: absolute;
+    width: 200px;
+    height: 150px;
+    top: 0;
+    z-index: -1;
+    left: 0;
+    border-radius: 10px;
+    box-shadow: 3px 3px 42px 3px rgb(89, 102, 223,23 );
+    display:none;
+    }
+
+    &:hover .animatetop , &:hover .animatebottom{
+        display: block;
+        animation: duration 2s;
+    }
+
+    & .animatebottom{
+        position: absolute;
+        width: 200px;
+        height: 150px;
+        bottom: 3px;
+        z-index: -1;
+        right: 0;
+        border-radius: 10px;
+        box-shadow: 3px 3px 42px 3px rgb(89, 102, 223,23 );
+        display:none;
+        
+    }
+
+
+}
+
+
+
+// .grid-new-item:nth-child(1){
+//     width:100%;
+
+    
+// }
+
+
+// .grid-new-item:nth-child(2){
+//     width: 100%;
+
+// }
+
+
+
+// .grid-new-item:nth-child(3){
+//     width:100%;
+// }
+
+
+
+
+// .grid-new-item:nth-child(4){
+//     width: 100%;
+// }
+
+//new products
+.new-items{
+    & h2{
+        margin: 50px 0;
+    }
+}
+
+//hot products
+.hot-items{
+    margin-top: 100px;
+
+    & > .btn-more{
+        margin-top: 90px;
+    }
+    & h2{
+        margin:50px 0;
+    }
+}
+.container-hot-items{
+    display: flex;
+    justify-content: space-around;
+    gap:20px;
+    & .grid-hot-item img{
+        border-radius: 10px;
+        box-shadow: 4px 15px 14px 0px rgba(0, 0, 0, 0.25);
+        height:340px;
+    }
+}
+
+//btn more
+.btn-more{
+    margin-top: 90px;
+
+    & a{
+        padding:20px 40px;
+        color:#fff;
+        background-color:#4334C8;
+        font-size:15px;
+        font-weight: 500;
+        border-radius:10px;
+    }
+}
+
+
+@media screen and (max-width:1186px) {
+    .grid-new-item{
+        & img{
+            
+        }
+    }
+}

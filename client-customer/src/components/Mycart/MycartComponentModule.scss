@@ -1,0 +1,24 @@
+.mycart{
+    margin-top: 120px;
+    & h2{
+        margin-bottom:40px;
+    }
+
+    & table{
+        margin:0 auto;
+
+        & th{
+            background: rgb(74, 74, 114);
+            color:#fff;
+            padding: 10px 20px;
+        }
+
+        & td p{
+            padding: 5px 20px;
+            white-space: nowrap;
+            width: 150px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+}

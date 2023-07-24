@@ -1,0 +1,30 @@
+.line{
+
+    position:relative;
+    & img{
+        width:40px;
+    }
+    &::after{
+        position:absolute;
+        content:"";
+        height:2px;
+        width:40%;
+        background-color:#000;
+        left:18px;
+        bottom:50%;
+        transform: translateY(-50%);
+        border-radius: 10px;
+    }
+    &::before{
+        position:absolute;
+        content:"";
+        width:40%;
+        height:2px;
+        background-color:#000;
+        right:18px;
+        bottom:50%;
+        transform: translateY(-50%);
+        border-radius: 10px;
+    }
+    
+}

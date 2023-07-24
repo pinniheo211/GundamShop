@@ -1,0 +1,51 @@
+.container-contact{
+
+    margin: 100px 0;
+    padding:100px 83px;
+    background-image:url('../../../assets/Gundam/contact.png');
+    background-size: 100% 130%;
+    background-repeat: no-repeat;
+    
+    & .contact-content{
+        width:40%;
+        & h1{
+            color:#fff;
+            font-size:30px;
+        }
+        & p{
+            margin: 70px 0 ;
+            color:#fff;
+            font-size: 15px;
+        }
+        & a{
+            padding: 20px 40px;
+            color:#fff;
+            font-size:500;
+            background-color: #4334C8;
+            border-radius:10px;
+        }
+    }
+}
+
+@media screen and (max-width:850px) {
+    .container-contact{
+        padding: 20px 20px;
+
+        & .contact-content{
+
+            & h1{
+                font-size: 30px;
+            }
+
+            & p {
+                font-size: 15px;
+                margin:40px 0;
+            }
+
+            & a{
+                padding:10px 20px;
+                font-size:15px;
+            }
+        }
+    }
+}

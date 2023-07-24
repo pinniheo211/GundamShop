@@ -1,0 +1,48 @@
+.order{
+    margin-top: 100px;
+    text-align: center;
+    margin-top: 160px;
+    padding: 0 50px;
+    width:100%;
+
+    & table{
+        margin:20px auto;
+        width:100%;
+        & th{
+            background: rgb(74, 74, 114);
+            color:#fff;
+            padding: 10px 20px;
+        }
+
+        & td p{
+            padding: 5px 20px;
+            white-space: nowrap;
+            width: 150px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+}
+
+.order-detail{
+    margin:40px auto;
+    padding:0 50px;
+    text-align: center;
+    & h2{
+        margin-bottom: 30px;
+    }
+
+    & table th{
+        background: rgb(74, 74, 114);
+            color:#fff;
+            padding: 10px 20px;
+    }
+
+    & td p{
+        padding: 5px 20px;
+            white-space: nowrap;
+            width: 150px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+    }
+}

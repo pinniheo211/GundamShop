@@ -1,0 +1,50 @@
+.active{
+    margin: 150px auto;
+    border-radius: 10px;
+    padding:20px 30px;
+    box-shadow: 2px 2px 11px 0px rgba(0, 0, 0, 0.25);
+    width: 400px;
+    
+    & form{
+        display:flex;
+        justify-content: center;
+        margin-top: 30px;
+        
+
+        & tbody{
+            display:flex;
+            flex-direction: column;
+            gap:10px;
+            align-items: center;
+            & input[type="submit"]{
+                margin-top: 10px;
+                color:#fff;
+                padding: 8px 0;
+                border:none;
+                border-radius: 10px;
+                width: 130px;
+                background-color: #4334C8;
+            }
+            & tr{
+                display:flex;
+                align-items: center;
+
+                & input{
+                    padding: 8px 10px;
+                    width: 200px;
+                    border-radius: 5px;
+                    box-shadow: 2px 2px 11px 0px rgba(0, 0, 0, 0.25);
+                    border:none;
+                    outline: none;
+                }
+
+                & td:nth-child(1){
+                    width: 70px;
+                }
+
+                
+            }
+        }
+    }
+
+}

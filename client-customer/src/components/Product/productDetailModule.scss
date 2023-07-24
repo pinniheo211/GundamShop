@@ -1,0 +1,42 @@
+.product-detail{
+    margin: 120px 0 ;
+    & > h2{
+        margin-bottom: 50px;
+    }
+    & .caption-right{
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: wrap;
+
+        & img{
+            box-shadow: 4px 15px 14px 0px rgba(0, 0, 0, 0.25);
+            border-radius: 10px;
+        }
+
+        & table > tbody{
+            display:flex;
+            flex-direction: column;
+            gap:20px;
+
+            & >tr> td {
+                font-size: 20px;
+
+                & input[type="submit"]{
+                    padding:10px 40px;
+                    border:none;
+                    font-weight:700;
+                    color:#fff;
+                    background:cornflowerblue;
+                    border-radius:10px;
+                }
+
+                & input[type="number"]{
+                    padding:5px 20px;
+                }
+            }
+        }
+    }
+
+
+}
+

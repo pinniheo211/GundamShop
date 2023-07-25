@@ -131,6 +131,13 @@ router.get('/customers', JwtUtil.checkToken, async function (req, res) {
   const customers = await CustomerDAO.selectAll();
   res.json(customers);
 });
+
+router.put('/customers/deactive/:id', JwtUtil.checkToken, async function (req, res) {
+  const _id = req.params.id;
+  const token = req.body.token;
+  const result = await CustomerDAO.active(_id, token, 0);
+  res.json(result);
+});
 router.get('/customers/sendmail/:id', JwtUtil.checkToken, async function (req, res) {
   const _id = req.params.id;
   const cust = await CustomerDAO.selectByID(_id);

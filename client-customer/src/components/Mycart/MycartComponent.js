@@ -19,7 +19,8 @@ class Mycart extends Component {
           <td><p>{item.product.price} VND</p></td>
           <td><p>{item.quantity}</p></td>
           <td><p>{item.product.price * item.quantity} VND</p></td>
-          <td><span className="link">Remove</span></td>
+                  <td><span className="link" onClick={() => this.lnkRemoveClick(item.product._id)}>Remove</span></td>
+
         </tr>
       );
     });
@@ -83,6 +84,15 @@ class Mycart extends Component {
         alert('SORRY BABY!');
       }
     });
+  }
+// event-handlers
+  lnkRemoveClick(id) {
+    const mycart = this.context.mycart;
+    const index = mycart.findIndex(x => x.product._id === id);
+    if (index !== -1) { // found, remove item
+      mycart.splice(index, 1);
+      this.context.setMycart(mycart);
+    }
   }
 }
 export default withRouter(Mycart);

@@ -4,7 +4,7 @@ const router = express.Router();
 //Utils
 const JwtUtil = require('../utils/JwtUtil');
 const EmailUtil = require('../utils/EmailUtil');
-...
+
 //DAOS
 const AdminDAO = require('../models/AdminDAO');  
 //daos

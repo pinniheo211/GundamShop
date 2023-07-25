@@ -7,6 +7,10 @@ const CustomerDAO = {
     const customer = await Models.Customer.findOne(query);
     return customer;
   },
+      async selectByID(_id) {
+    const customer = await Models.Customer.findById(_id).exec();
+    return customer;
+  }
   async insert(customer) {
     const mongoose = require('mongoose');
     customer._id = new mongoose.Types.ObjectId();
@@ -19,6 +23,7 @@ const CustomerDAO = {
     const result = await Models.Customer.findOneAndUpdate(query, newvalues, { new: true });
     return result;
   },
+
   async selectByUsernameAndPassword(username, password) {
     const query = { username: username, password: password };
     const customer = await Models.Customer.findOne(query);

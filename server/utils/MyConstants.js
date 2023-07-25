@@ -4,7 +4,7 @@ const MyConstants = {
     DB_PASS: 'ZwfdZLF0rwJRdKYA',
     DB_DATABASE: 'GundamBK',
     EMAIL_USER: 'tranchicuong21102@gmail.com',
-    EMAIL_PASS: 'srndgjourtrugzbz',
+    EMAIL_PASS: 'Pudding0819',
     JWT_SECRET: '123',
     JWWT_EXPIRES: '18000000',
 };

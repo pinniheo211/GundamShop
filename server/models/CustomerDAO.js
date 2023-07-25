@@ -7,10 +7,6 @@ const CustomerDAO = {
     const customer = await Models.Customer.findOne(query);
     return customer;
   },
-  async selectByID(_id) {
-    const customer = await Models.Customer.findById(_id).exec();
-    return customer;
-  },
   async insert(customer) {
     const mongoose = require('mongoose');
     customer._id = new mongoose.Types.ObjectId();
@@ -38,6 +34,10 @@ const CustomerDAO = {
     const query = {};
     const customers = await Models.Customer.find(query).exec();
     return customers;
+  },
+  async selectByID(_id) {
+    const customer = await Models.Customer.findById(_id).exec();
+    return customer;
   }
 };
 module.exports = CustomerDAO;

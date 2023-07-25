@@ -3,6 +3,8 @@ const router = express.Router();
 
 //Utils
 const JwtUtil = require('../utils/JwtUtil');
+const EmailUtil = require('../utils/EmailUtil');
+...
 //DAOS
 const AdminDAO = require('../models/AdminDAO');  
 //daos
@@ -128,6 +130,20 @@ router.get('/orders/customer/:cid', JwtUtil.checkToken, async function (req, res
 router.get('/customers', JwtUtil.checkToken, async function (req, res) {
   const customers = await CustomerDAO.selectAll();
   res.json(customers);
+});
+router.get('/customers/sendmail/:id', JwtUtil.checkToken, async function (req, res) {
+  const _id = req.params.id;
+  const cust = await CustomerDAO.selectByID(_id);
+  if (cust) {
+    const send = await EmailUtil.send(cust.email, cust._id, cust.token);
+    if (send) {
+      res.json({ success: true, message: 'Please check email' });
+    } else {
+      res.json({ success: false, message: 'Email failure' });
+    }
+  } else {
+    res.json({ success: false, message: 'Not exists customer' });
+  }
 });
 
 

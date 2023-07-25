@@ -25,7 +25,7 @@ class Customer extends Component {
           <td>{item.active}</td>
           <td>
             {item.active === 0 ?
-              <span className="link">EMAIL</span>
+              <span className="link" onClick={() => this.lnkEmailClick(item)}>EMAIL</span>
               :
               <span className="link">DEACTIVE</span>}
           </td>
@@ -118,6 +118,19 @@ class Customer extends Component {
           : <div />}
       </div>
     );
+  }
+
+// event-handlers
+  lnkEmailClick(item) {
+    this.apiGetCustomerSendmail(item._id);
+  }
+  // apis
+  apiGetCustomerSendmail(id) {
+    const config = { headers: { 'x-access-token': this.context.token } };
+    axios.get('/api/admin/customers/sendmail/' + id, config).then((res) => {
+      const result = res.data;
+      alert(result.message);
+    });
   }
   componentDidMount() {
     this.apiGetCustomers();

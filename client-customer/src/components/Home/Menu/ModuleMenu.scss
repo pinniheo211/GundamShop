@@ -30,7 +30,7 @@
         top:0;
         width:100%;
         left:0;
-        box-shadow: 4px 15px 14px 900px rgba(0, 0, 0, 0.25);
+        box-shadow: 4px 15px 14px 1000px rgba(0, 0, 0, 0.25);
         display:block;
         & li a{
             color:#000;
@@ -50,7 +50,7 @@
         & > div {
             background: #fff;
             width:500px;
-            height:900px;
+            height:700px;
             border-radius:0 50% 100% 0 ;
             display: flex;
             flex-direction: column;
